@@ -1,21 +1,11 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth; /* Défilement fluide */
+  font-family: 'Inter', sans-serif;
+  background-color: #1a1a1a; /* Fond noir/gris */
+  color: white; /* Texte en blanc pour contraster */
 }
