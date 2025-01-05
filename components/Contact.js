@@ -30,12 +30,7 @@ export default function Contact() {
           transition={{ delay: 0.5, duration: 1 }}
         >
           
-          <IconButton aria-label="fingerprint" color="secondary">
-  <Fingerprint />
-</IconButton>
-<IconButton aria-label="fingerprint" color="success">
-  <Fingerprint />
-</IconButton>
+        
 Si vous n’êtes pas familier avec le terminal, vous pouvez utiliser le bouton ci-dessus pour obtenir une version carte bento.
         </motion.p>
 

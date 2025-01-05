@@ -86,16 +86,16 @@ const Background: React.FC<BackgroundProps> = ({ dots, mask }) => {
           left: `${position.x}px`,
           width: '100px',
           height: '100px',
-          borderRadius: '50%',
+          borderRadius: '50%', 
           background: 'rgba(255, 255, 255, 0.1)',
-          transform: 'translate(-85%, -85%)', // Centrer le cercle autour de la souris
+          transform: 'translate(-50%, -50%)',
           animation: 'pulse 2s infinite ease-out',
           pointerEvents: 'none',
-          boxShadow: `
-            -40px -40px ${glowIntensity} rgba(255, 255, 255, 0.8),   /* Ombre nette */
-            -40px -40px 25px rgba(255, 255, 255, 0.5),   /* Ombre plus grande */
-            -40px -40px 50px rgba(255, 255, 255, 0.3)    /* Ombre encore plus grande */
-          `, // Ombres multiples autour de la souris
+          filter: `
+            drop-shadow(0 0 ${glowIntensity} rgba(255, 255, 255, 0.8))
+            drop-shadow(0 0 25px rgba(255, 255, 255, 0.5))
+            drop-shadow(0 0 50px rgba(255, 255, 255, 0.3))
+          `, // Utilisation de drop-shadow pour un effet centré
         }}
       />
     </div>
