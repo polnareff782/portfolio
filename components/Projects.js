@@ -1,3 +1,4 @@
+// app/projects/page.js
 'use client';
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -23,8 +24,11 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-32 bg-gray-900">
-      <div className="container mx-auto">
+    <section id="projects" className="py-32 bg-transparent relative">
+      {/* Fond flou (optionnel) */}
+      <div className="absolute inset-0 bg-gray-900 opacity-50 z-0"></div>
+
+      <div className="container mx-auto relative z-10">
         <motion.h2
           className="text-5xl font-bold text-center mb-12"
           initial={{ opacity: 0, y: -20 }}

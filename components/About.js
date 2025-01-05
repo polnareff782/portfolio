@@ -59,7 +59,7 @@ export default function About() {
           {Object.entries(skills).map(([category, skillsList], index) => (
             <motion.div
               key={index}
-              className="bg-gray-800 p-6 shadow-lg rounded-xl text-gray-800"
+              className="bg-gray-800 bg-opacity-20 backdrop-blur-md border border-white border-opacity-10 p-6 shadow-lg rounded-xl text-gray-800 hover:shadow-[0_0_20px_5px_rgba(59,130,246,0.5)] transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.5 }}

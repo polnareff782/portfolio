@@ -1,3 +1,4 @@
+// app/hero/page.js
 'use client';
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -6,9 +7,12 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="h-screen flex items-center justify-center bg-gray-900 text-white"
+      className="h-screen flex items-center justify-center bg-transparent text-white relative"
     >
-      <div className="container mx-auto flex items-center justify-between px-8">
+      {/* Fond flou (optionnel) */}
+      <div className="absolute inset-0 bg-gray-900 opacity-50 z-0"></div>
+
+      <div className="container mx-auto flex items-center justify-between px-8 relative z-10">
         {/* Texte à gauche */}
         <motion.div
           className="text-left max-w-2xl"
@@ -17,7 +21,7 @@ export default function Hero() {
           transition={{ duration: 1.5 }}
         >
           <h1 className="text-5xl font-bold mb-6">
-            Je suis <span className="text-yellow-300">Bemmehal Joris</span>
+            Je suis <span className="text-yellow-300">Polnareff</span>
           </h1>
           <p className="text-xl mb-8">
             Création de solutions élégantes pour les problèmes complexes, une ligne de code à la fois.

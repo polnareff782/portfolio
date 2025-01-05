@@ -3,9 +3,55 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --static-transparent: transparent;
+  --page-background: #181717cb;
+  --brand-background-medium: #cccccc;
+  --accent-solid-medium: #ff00ff;
+  --brand-on-background-weak: #999999;
+}
+
 body {
   scroll-behavior: smooth; /* Défilement fluide */
   font-family: 'Inter', sans-serif;
-  background-color: #1a1a1a; /* Fond noir/gris */
+  background-color: var(--page-background);
   color: white; /* Texte en blanc pour contraster */
+  overflow: auto; /* Permet le défilement */
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+}
+
+/* Quadrillage de points noirs */
+.grid-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place le fond derrière le contenu */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10px, 1fr)); /* Taille des points */
+  grid-template-rows: repeat(auto-fill, minmax(10px, 1fr)); /* Taille des points */
+  gap: 10px; /* Espacement entre les points */
+}
+
+/* Points noirs */
+.grid-point {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Couleur noire avec opacité */
+  border-radius: 50%; /* Forme ronde */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Effet de fondu */
 }

@@ -1,3 +1,4 @@
+// app/contact/page.js
 'use client';
 import { motion } from "framer-motion";
 import { FaEnvelope, FaTwitter, FaLinkedin, FaCode, FaGamepad, FaRunning } from 'react-icons/fa';
@@ -8,7 +9,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-32 bg-gray-900 text-white relative overflow-hidden">
       {/* Fond flou */}
-      <div className="absolute inset-0 bg-[url('/images/background-blur.jpg')] bg-cover bg-center blur-sm opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('/images/background-blur.jpg')] bg-cover bg-center blur-sm opacity-20 z-0"></div>
 
       <div className="container mx-auto px-8 relative z-10">
         {/* Titre */}
@@ -28,7 +29,14 @@ export default function Contact() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Si vous n’êtes pas familier avec le terminal, vous pouvez utiliser le bouton ci-dessus pour obtenir une version carte bento.
+          
+          <IconButton aria-label="fingerprint" color="secondary">
+  <Fingerprint />
+</IconButton>
+<IconButton aria-label="fingerprint" color="success">
+  <Fingerprint />
+</IconButton>
+Si vous n’êtes pas familier avec le terminal, vous pouvez utiliser le bouton ci-dessus pour obtenir une version carte bento.
         </motion.p>
 
         {/* Grille principale */}
